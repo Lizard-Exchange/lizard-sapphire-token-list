@@ -1,0 +1,28 @@
+{
+  "name": "@cryptoguysclub/sapphire-default-token-list",
+  "version": "1.2.6",
+  "description": "The Lizard default staking list",
+  "main": "build/sapphire-default.tokenlist.json",
+  "scripts": {
+    "test": "mocha",
+    "build": "rimraf build && mkdir build && node src/writeTokenList.js > build/sapphire-default.tokenlist.json",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "files": [
+    "build/sapphire-default.tokenlist.json"
+  ],
+  "keywords": [
+    "sapphire",
+    "default",
+    "token",
+    "list"
+  ],
+  "author": "LionCript",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "ajv": "^6.12.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "rimraf": "^3.0.2"
+  }
+}
